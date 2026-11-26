@@ -42,10 +42,11 @@ FROM tabela_a a
 RIGHT JOIN tabela_b b
     ON a.id_a = b.id_b;
 
-SELECT a.id_a, b.id_b
+SELECT b.id_b
 FROM tabela_a a
 RIGHT JOIN tabela_b b
-    ON a.id_a = b.id_b;
+    ON a.id_a = b.id_b
+WHERE a.id_a IS NULL;
 
 SELECT a.id_a, b.id_b
 FROM tabela_a a
